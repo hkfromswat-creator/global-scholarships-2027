@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Scholarships 2027 - Find Bachelor, Masters & PhD Opportunities</title>
+  <meta name="description" content="Discover 1,065+ verified scholarships from 60 countries. Search Bachelor, Master and PhD opportunities from universities worldwide.">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">Scholar<span>ships</span><i class="fas fa-graduation-cap"></i></div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#browse" class="active">Browse</a></li>
+        <li><a href="#browse" id="latestLink"><i class="fas fa-bolt" style="margin-right:6px;font-size:0.8em;color:var(--accent)"></i>Latest Scholarships</a></li>
+        <li><a href="#stats">Stats</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fas fa-check-circle"></i> 1,065 Verified Opportunities</div>
+      <h1>Find Your <span class="gradient-text">Scholarship</span> for 2027</h1>
+      <p class="hero-sub">Explore <strong>Bachelor, Master &amp; PhD</strong> opportunities from universities, governments, and organizations worldwide.</p>
+      <div class="hero-search">
+        <i class="fas fa-search"></i>
+        <input type="text" id="heroSearch" placeholder="Try: Chevening, Harvard, fully funded, Pakistan...">
+        <button id="heroSearchBtn">Search</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-number" id="hero-total">1,065</span>
+          <span class="hero-stat-label">Scholarships</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" id="hero-funded">449</span>
+          <span class="hero-stat-label">Fully Funded</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" id="hero-countries">60</span>
+          <span class="hero-stat-label">Countries</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-number" id="hero-subjects">104</span>
+          <span class="hero-stat-label">Subjects</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,69.3C960,85,1056,107,1152,106.7C1248,107,1344,85,1392,74.7L1440,64L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z" fill="var(--bg)"></path>
+      </svg>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <!-- Filter Bar -->
+    <section id="browse" class="section">
+      <div class="section-header">
+        <h2><i class="fas fa-filter"></i> Browse Scholarships</h2>
+        <div class="results-count" id="results-count">1,065 scholarships found</div>
+      </div>
+
+      <div class="filter-bar" id="filterBar">
+        <div class="filter-body" id="filterBody">
+        <div class="filter-group filter-search-group">
+          <label for="mainSearch">Search</label>
+          <div class="filter-search">
+            <i class="fas fa-search"></i>
+            <input type="text" id="mainSearch" placeholder="Search scholarships..." autocomplete="off">
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label>Degree Level</label>
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="bachelor">Bachelor</button>
+            <button class="filter-btn" data-filter="master">Master</button>
+            <button class="filter-btn" data-filter="phd">PhD</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="country-select">Country</label>
+          <div class="select-wrap">
+            <i class="fas fa-globe"></i>
+            <select id="country-select" class="sort-select">
+              <option value="">All Countries</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="subject-select">Subject</label>
+          <div class="select-wrap">
+            <i class="fas fa-book"></i>
+            <select id="subject-select" class="sort-select">
+              <option value="">All Subjects</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label>Funding</label>
+          <div class="filter-buttons">
+            <button class="filter-btn funding-btn active" data-funding="all">All</button>
+            <button class="filter-btn funding-btn" data-funding="fully funded">Fully Funded</button>
+            <button class="filter-btn funding-btn" data-funding="partially funded">Partial</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="sort-by">Sort By</label>
+          <div class="select-wrap">
+            <i class="fas fa-sort"></i>
+            <select id="sort-by" class="sort-select">
+              <option value="default">Default</option>
+              <option value="latest">Latest Added</option>
+              <option value="deadline">Deadline (Soonest)</option>
+              <option value="alpha">A - Z</option>
+              <option value="funding">Fully Funded First</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="clear-all" class="btn-clear"><i class="fas fa-times"></i> Clear All</button>
+        </div>
+      </div>
+
+      <!-- Active filters summary -->
+      <div class="active-filters" id="activeFilters" hidden></div>
+
+      <!-- Scholarships Grid -->
+      <section id="scholarships" class="scholarships-grid">
+        <!-- Scholarships injected here -->
+      </section>
+    </section>
+
+  </main>
+
+  <!-- Statistics Section -->
+  <section id="stats" class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-globe"></i></div>
+        <div class="stat-number" id="total-scholarships">0</div>
+        <div class="stat-label">Total Scholarships</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-money-bill-wave"></i></div>
+        <div class="stat-number" id="fully-funded">0</div>
+        <div class="stat-label">Fully Funded</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-flag"></i></div>
+        <div class="stat-number" id="pakistani-students">0</div>
+        <div class="stat-label">For Pakistani Students</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon"><i class="fas fa-university"></i></div>
+        <div class="stat-number" id="total-countries">0</div>
+        <div class="stat-label">Countries</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="about" class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">Scholar<span>ships</span><i class="fas fa-graduation-cap"></i></div>
+        <p>Data is compiled from official university scholarship portals and reputable scholarship aggregators. Verify eligibility on the official site.</p>
+      </div>
+      <div class="footer-stats">
+        <p>Total verified opportunities: <span id="footer-count">0</span></p>
+        <p>&copy; 2027 Global Scholarships. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

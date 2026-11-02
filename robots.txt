@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*?*
+
+Sitemap: https://globalscholarships.example.com/sitemap.xml
